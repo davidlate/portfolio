@@ -10,16 +10,20 @@
     font-family: Roboto, sans-serif;
     box-sizing: border-box;
     --radius: 10px;
-    --celeste: #c5fffdff;
-    --middle-blue: #88d9e6ff;
-    --cool-grey: #8b8baeff;
-    --feldgrau: #526760ff;
-    --dark-slate-gray: #374b4aff;
+    --light-background: #FFFFFF;
+    --dark-background: #3a4a65;
+    --darker-background: #2D3142;
+    --dark-text: rgb(75, 22, 22);
+
+    --light-text: #BFC0C0;
+    --header-text: white;
+    --footer-background: #e2855e;
+
 }
 
-body{
-    background-color: var(--cool-grey);
 
+body{
+    background-color: var(--dark-background);
 }
 
 img{
@@ -29,18 +33,30 @@ img{
 
 h1{
     font-size: 3rem;
-
 }
 
+h3{
+    color: var(--footer-background);
+    text-align: center;
+}
+
+p{
+    font-weight: 600;
+}
+
+
+section{
+    padding-top: 10px;
+}
 
 .header{
     display: grid;
     justify-content: center;
-    background-color: var(--celeste);
+    background-color: var(--darker-background);
+    color: var(--header-text);
     box-shadow: 0px 3px 5px rgb(170, 169, 169);
     position: sticky;
     top:0px;
-    width: 100vw;
     padding-bottom: 12px;
     padding-top: 12px;
 }
@@ -52,17 +68,22 @@ h1{
     justify-content: space-around;
 }
 
+.socials img{
+    height: 2rem;
+}
+
 .main{
-    padding: 15px 30px;
+    padding: 5px 30px;
     max-width: 1300px;
     margin: auto;
+    color: var(--dark-text)
 }
 
 
 .grid1{
     display: grid;
     padding: 15px 15px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     justify-content: space-around;
     text-align: center;
     column-gap: 25px;
@@ -73,6 +94,8 @@ h1{
     border-radius: var(--radius);
     box-shadow: -1px -1px 3px grey,
     1px 1px 3px rgb(61, 61, 61);
+    background-color: var(--darker-background);
+    color: var(--light-text);
 }
 
 .item img{
@@ -82,7 +105,7 @@ h1{
 
 
 .footer{
-    background-color: beige;
+    background-color: var(--footer-background);
     text-align: center;
     height: 50px;
     padding-top: 10px;

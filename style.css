@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Roboto;
+    src: url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+    --radius: 10px;
+    --celeste: #c5fffdff;
+    --middle-blue: #88d9e6ff;
+    --cool-grey: #8b8baeff;
+    --feldgrau: #526760ff;
+    --dark-slate-gray: #374b4aff;
+}
+
+body{
+    background-color: var(--cool-grey);
+
+}
+
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+h1{
+    font-size: 3rem;
+
+}
+
+
+.header{
+    display: grid;
+    justify-content: center;
+    background-color: var(--celeste);
+    box-shadow: 0px 3px 5px rgb(170, 169, 169);
+    position: sticky;
+    top:0px;
+    width: 100vw;
+    padding-bottom: 12px;
+    padding-top: 12px;
+}
+
+
+.socials>ul{
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-around;
+}
+
+.main{
+    padding: 15px 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+.grid1{
+    display: grid;
+    padding: 15px 15px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));;
+    justify-content: space-around;
+    text-align: center;
+    column-gap: 25px;
+    row-gap: 10px;
+}
+
+.item{
+    border-radius: var(--radius);
+    box-shadow: -1px -1px 3px grey,
+    1px 1px 3px rgb(61, 61, 61);
+}
+
+.item img{
+    border-radius: 10px 10px 0px 0px;
+
+}
+
+
+.footer{
+    background-color: beige;
+    text-align: center;
+    height: 50px;
+    padding-top: 10px;
+    position: relative;
+}

@@ -98,7 +98,7 @@ section{
     display: grid;
     padding: 15px 15px;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-template-rows: repeat(150px, 6);
+    grid-template-rows: repeat(150px, 7);
     justify-content: space-around;
     text-align: center;
     column-gap: 25px;

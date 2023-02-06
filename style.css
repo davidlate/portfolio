@@ -85,7 +85,7 @@ section{
 
 .main{
     padding: 0px 30px;
-    max-width: 1250px;
+    max-width: 950px;
     margin: auto;
     color: var(--dark-text);
     /* background-color: hsl(199, 100%, 91%); */
@@ -160,6 +160,8 @@ button.item:active{
 }
 
 
+
+
 .footer{
     background-color: var(--dark-background);
     color: white;
@@ -168,4 +170,22 @@ button.item:active{
     padding-top: 10px;
     position: relative;
     margin-top: 20px;
+}
+
+
+/* SKILLS PAGE */
+
+
+
+.part{
+    scroll-margin-top: 100px;
+}
+
+.part li{
+    margin-bottom: 15px;
+}
+
+a.linked{
+    color: rgb(6, 33, 208);
+    text-decoration: underline;
 }

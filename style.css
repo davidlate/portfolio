@@ -85,7 +85,7 @@ section{
 
 .main{
     padding: 0px 30px;
-    max-width: 950px;
+    max-width: 900px;
     margin: auto;
     color: var(--dark-text);
     /* background-color: hsl(199, 100%, 91%); */

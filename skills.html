@@ -51,9 +51,10 @@
                 <li><h4>Drawings using GD&T</h4>
                 <p>I am proficient using GD&T following ASME Y14.5, and have primarily used it for flatness, parallelism, press-fits, and true positioning of holes. <br><br>
                     It's useful for using alignment hardware to create precise assembly fits and for ensuring proper fluid sealing and heat transfer without "overspecifying" tolerances. <br><br>
-                    I've found the <a class="linked" href="https://www.sae.org/publications/books/content/pd0219100-pg01/">SAE GD&T Pocket Guide</a> is a very useful reference - particularly for understand datum assignments
+                    I've found the <a class="linked" target="_blank" rel="noopener noreferrer" href="https://www.sae.org/publications/books/content/pd0219100-pg01/" >SAE GD&T Pocket Guide</a> is a very useful reference - particularly for understand datum assignments
                     and the meanings behind tolerance callouts (for example: how a ⌀.014" true position callout can end up being as tight as +/-.005", and how to understand MMC callouts), although many of the examples in the book would only be used in very specific applications. <br><br>
-                    In most all cases, it's best to talk with the vendor to find out their preference, oftentimes I have been surprised with the capabilities they've offered as being easy, such as 5-axis machining, as technology has advanced over the years.
+                    In most all cases, it's best to talk with the vendor to find out their preference, oftentimes I have been surprised with the capabilities they've offered as being easy, such as 5-axis machining, as technology has advanced over the years. <br>
+                    The <a class="linked" target="_blank" rel="noopener noreferrer" href="https://books.industrialpress.com/9780831130923/machinerys-handbook-large-print/">Machinery's Handbook</a> also has some nice examples of GD&T applications.
                 </p>
             </li>
 
@@ -79,7 +80,7 @@
                 </p>
                 </li>
                 <li><h4>Sheet Metal</h4>
-                <p>I've designed and tested a few parts out of sheet metal.  The main considerations I follow are to keep an eye on minimum bend radii, 
+                <p>I've designed and tested parts using sheet metal.  The main considerations I follow are to keep an eye on minimum bend radii, 
                     and the tolerancing stackups between holes and other features.  K-factors are one way to measure bend radii, though some suppliers will have a
                     fixed recommendation that works with their tools, and others will specify the radius as a multiple of material thickness. <br><br>
                     Generally, tolerancing between parts on the same piece can be quite good, but features with bends between them can be off by as much as +/- .030", necessitating
@@ -92,7 +93,15 @@
                     incorporating a 3-4° draft angle on all vertical faces, and being mindful of where the injection points may be so that the plastic doesn't cool down before fully filling the mold.
                 </p>
                 </li>
-                <li><h4>Additive Manufacturing / 3D Printing Metal & Plastic</h4></li>
+                <li><h4>Additive Manufacturing / 3D Printing Metal & Plastic</h4>
+                <p>I've prototyped extensively using resin SLA 3D printers, which are very nice for complex geometries but struggle with respect to dimensional stability and print times. <br><br> In particular they
+                    can have a tendency to warp toward the "supported" side while curing and they struggle with internal cavities where fluid is unable to drain during printing. Care must be taken to orient the most critical features correctly on the build platform to maximize chances for a
+                    successful part.<br><br>
+                I've also used 3D printed metal for rapid prototyping; this enables quick production of very complex geometries but requires certain considerations to be used effectively.  In particular, 
+                it leaves a very rough surface finish which often requires post-machining, but the rough surfaces don't provide good reference surfaces to fixture and align the post-machining operation. <br><br>
+                Additionally, there can be voids hidden in the material, the complex geometries make complete inspection difficult, and there may be leftover un-sintered powder hidden in cavities.  Additionally,
+                there are fewer resources available for the material properties of 3D printed metal - including strength, thermal conductivity, and material compatibility; and the properties that are available must be taken with a grain of salt as the 3D printed materials are anisotropic.
+            </p></li>
             </ol>
         </section>
 
@@ -166,7 +175,7 @@
             </ol>
         </section>
 
- -->
+ 
 </section>
 </section>
 

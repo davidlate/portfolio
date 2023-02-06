@@ -189,3 +189,13 @@ a.linked{
     color: rgb(6, 33, 208);
     text-decoration: underline;
 }
+
+ul.bullet{
+    margin-top: 10px;
+}
+
+ul.bullet li{
+    list-style-type: disc;
+    margin-left: 15px;
+    
+}

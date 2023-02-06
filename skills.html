@@ -108,8 +108,54 @@
         <section class="micro part" id="micro">
             <h3>Microcontrollers and Automation</h3>
             <ol>
-                <li><h4>Raspberry Pi and BeagleBone</h4></li>
-                <li><h4>Arduino</h4></li>
+                <li><h4>Raspberry Pi and BeagleBone</h4>
+                <p>
+                    I've been experimenting with small Single-Board computers like the Raspberry Pi and BeagleBone since sophomore year in college.  A BeagleBone is similar to a Raspberry Pi, but is
+                    readily available and doesn't suffer from the Pi's supply chain issues.  The catch is that BeagleBones are much slower, often don't include
+                    Wi-Fi functionality, and mainly work through just a command-line interface (the GUI is not great, in my opinion). Some things I have done with these devices include:</p>
+                    <ul class="bullet">
+
+                        <li>
+                            <p>Reading and recording data from multiple sensors, and using data to automatically control hardware, with the help of a LabJack device (detailed further in following sections).</p>
+                        </li>
+                        <li>
+                            <p>Connecting and reading data over SSH.  I like the <a class="linked" target="_blank" rel="noopener noreferrer" href="https://linuxize.com/post/how-to-use-linux-screen/">screen</a> 
+                                application that maintains a single SSH session even if the original connection is disconnected so long as the Pi remains on, and can be configured to run automatically on startup.</p>
+                        </li>
+                        <li>
+                            <p>Driving servos and stepper motors using PWM hardware pins as part of my college capstone.</p>
+                        </li>
+                        <li>
+                            <p>Driving gear motors and recording their position using rotary encoders.</p>
+                        </li>
+                        <li>
+                            <p>Running python scripts on startup using crontab, and incorporating simple linux scripts to automatically mount and unmount USB drives and SD cards on startup or upon a button push.</p>
+                        </li>
+                        <li>
+                            <p>Re-soldering the mini-USB socket back onto a Raspberry Pi.</p>
+                        </li>
+
+
+                    </ul>
+            
+                <p>In my opinion, these computers are limited because they don't use a Real-Time Operating System, and as such your programs may be 
+                    somewhat subject to the whims of the Linux operating system, interrupting their timing.  This is usually not an issue, but can make it difficult to run programs on startup and 
+                    maintain precise fixed sampling intervals without external hardware to help.  In my opinion most setups function much better when the brunt of the
+                    sampling is dependent on a microcontroller such as an Arduino or a DAQ such as a LabJack, with the Raspberry Pi being used to record the data
+                    and access the internet.
+                </p>
+                <p><br>
+                    In my opinion these devices would hugely benefit from a Real-Time Clock addition such as <a class="linked" rel="noopener noreferrer" target="_blank" href="https://www.adafruit.com/product/3386">this</a>,
+                    which I look forward to trying.</p>
+
+                </li>
+                <li><h4>Arduino</h4>
+                <p>I've used Arduino in school and for personal projects. I like them for their simplicity (any program you write runs immediately on startup), 
+                    their use of 5V logic (as opposed to 3.3V for the Raspberry Pi), and the fact that they have built-in Analog IO channels in addition to the Digital IO.
+                    I've used Arduino with C++ to read sensors including an ultrasonic distance sensor and control motors through a motor controller circuit. <br><br></p>
+                <p>In the future, I would be interested to create a custom PCB and incorporate the Arduino microcontroller without the rest of the board into the PCB as part of a personal project.
+                    I would use the hobbyist license for <a href="https://www.autodesk.com/products/eagle/free-download" class="linked" rel="noopener noreferrer" target="_blank">Eagle</a> to design the PCB and <a href="https://oshpark.com/" class="linked" rel="noopener noreferrer" target="_blank">OshPark</a> to fabricate it.
+                </p>
                 <li><h4>LabJack</h4></li>
             </ol>
         </section>

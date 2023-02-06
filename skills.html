@@ -210,11 +210,11 @@
                 <li><h4>Sensor Uncertainty</h4>
                 <p>One of the most important yet frequently overlooked aspects of sensor selection is uncertainty analysis, particularly using the error propagation formula.
                     As an example, it can be easy to purchase thermocouples to measure sensible heat rise in a fluid and assume that the nominal +/- 1° accuracy seems good enough - then
-                    doing the math realize that the uncertainty is much greater than the expected result!  Similarly, some instruments such as the clamp ammeters can actually be very accurate for
+                    do the math and realize that the uncertainty is much greater than the expected result! <br> Similarly, some instruments such as the clamp ammeters can actually be very accurate for
                     some applications, which wouldn't be apparent without working out how the combination of uncertainties affects the measured variable.
                 </p> 
-                <br><br>
-            <p>In any test setup, it's best for every measured variable to be acquired using sensors that have manufacturer's accuracy specificaitons, and that the expected
+                <br>
+            <p>In any test setup, it's best for every measured variable to be acquired using sensors that have manufacturer's accuracy specifications, and that the expected
                 root-sum-square uncertainty is sufficiently less than the expected measurement quantity.
             </p>
             </li>
@@ -223,27 +223,22 @@
                 <ul class="bullet">
 
                     <li>
-                        <h4>Grounded or Ungrounded Thermocouples?</h4>
+                        <h5>Grounded or Ungrounded Thermocouples?</h5>
                         <p>As a very brief summary, "grounded" thermocouples are electrically bonded to the body of the device their enclosed in, while "ungrounded" thermocouples
                             are electrically <em>"insulated"</em> from the chassis.
                         </p>
-                        <p>Generally, ungrounded thermocouples are used when measuring conductive media or when installed with other thermocouples being read by the same device into a common conductive chassis, such as steel piping.  
+                        <p>Generally, ungrounded thermocouples are used when measuring conductive media or when installed with other thermocouples being read by the same device into a common conductive chassis, such as steel piping.  <br><br>
                             Grounded thermocouples are used when measuring non-conductive media such as air.  When multiple thermocouples are electrically joined in more than one place, their signals can interfere with each other
                             in a phenomenon called a "ground loop" which will give incorrect readings.</p>
-                            <br><br>
-                            <p>The <em>"insulated"</em> is in italics because, in some cases, there is still enough electrical conductivity between the measuring element and the chassis to cause problems.  This comes into play
-                            because some multi-channel thermocouple readers use a common electrical ground plane for all channels, instead of isolating all of the channels.  If the ungrounded thermocouples do not provide enough insulation,
+                            <br>
+                            <p>The <em>"insulated"</em> is in italics because, in some cases, there is still enough electrical conductivity between the measuring element and the ungrounded thermocouple chassis to cause problems.  This comes into play
+                            because some multi-channel thermocouple readers use a common electrical ground plane for all channels, instead of isolating all of the channels. <br><br> If the ungrounded thermocouples do not provide enough insulation,
                             this common ground plane can act as the second connection point between thermocouples, and cause the ground loop errors.  The best way to avoid this error is to measure the electrical resistance between the thermocouple
                             leads and the thermocouple chassis, and the resistance between each channel on the thermocouple reader being used.</p>
                         </p>
                     </li>
             
-            </li>
-                
-                
-                
-                <li><h4></h4></li>
-                
+                </li>                
 
             </ol>
         </section>

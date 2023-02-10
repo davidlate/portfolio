@@ -210,8 +210,12 @@
                 <li><h4>Sensor Uncertainty</h4>
                 <p>One of the most important yet frequently overlooked aspects of sensor selection is uncertainty analysis, particularly using the error propagation formula.
                     As an example, it can be easy to purchase thermocouples to measure sensible heat rise in a fluid and assume that the nominal +/- 1° accuracy seems good enough - then
-                    do the math and realize that the uncertainty is much greater than the expected result! <br> Similarly, some instruments such as the clamp ammeters can actually be very accurate for
-                    some applications, which wouldn't be apparent without working out how the combination of uncertainties affects the measured variable.
+                    do the math and realize that the uncertainty is much greater than the expected result! 
+                    <br>
+                    <br>
+                    Similarly, some instruments such as the clamp ammeters can actually be very accurate for
+                    some applications, which wouldn't be apparent without working out how the combination of uncertainties affects the measured variable.  When performing These
+                    calculations, it's usually important to include the resolution of the displays, and the resolution / number of bits of the DAQ hardware.
                 </p> 
                 <br>
             <p>In any test setup, it's best for every measured variable to be acquired using sensors that have manufacturer's accuracy specifications, and that the expected
@@ -227,7 +231,7 @@
                         </p>
                         <p>Areas of uncertainty include sensor accuracy, shunt resistor resistance accuracy, voltage reading accuracy, and DAQ resolution</p>
                         </li>
-                        <li><h5>Voltage-Based (0-5V, 0-10V, etc.)</h5>
+                        <li><h5>Voltage-Based (0-5V, 0-10V)</h5>
                             <p> These signals are very simple and intuitive to set up, and they have a low lagtime due to the simple internal circuitry.  Though, they can be more susceptible to EMI and signal degradation from
                                 long cable runs - particularly the 0-5V signals.  It's important that the DAQ and the power supply for these sensors share a common ground,
                                 otherwise the signal will not work.

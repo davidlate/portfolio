@@ -197,7 +197,7 @@
                     of the projects I've been working on, including this website.
                 </p></li>
                 <li><h4>LabView</h4>
-                <p>I learned Labview in my Measurements class in school in 2019, and also used LabView as a sophomore in 2017 working in the Shefelbine Lab to create a more intuitive interface for data visualization,
+                <p>I learned LabView in my Measurements class in school in 2019, and also used LabView as a sophomore in 2017 working in the <a href="https://www.shefelbine.org/" class="linked" target="_blank" rel="noopener noreferrer">Shefelbine Lab</a> to create a more intuitive interface for data visualization,
                     building on a senior's capstone project for a mechanical device to provide therapy to spinal cord injury patients.
                 </p></li>
             </ol>
@@ -218,7 +218,42 @@
                 root-sum-square uncertainty is sufficiently less than the expected measurement quantity.
             </p>
             </li>
-                <li><h4>Signal Types</h4></li>
+                <li><h4>Signal Types</h4>
+                    <ul class="bullet">
+                        <li><h5>Current-Based (4-20mA)</h5>
+                        <p>These are robust signals, resistant to interference from EMI and long pipe runs.  Though, they require more measurement effort 
+                            in the form of setting up a suitably precise shunt resistor in series and measuring the voltage drop across the resistor.  And, they tend to slightly lag
+                            in response time compared to voltage-based signals. The 2-wire configuration is very convenient.
+                        </p>
+                        <p>Areas of uncertainty include sensor accuracy, shunt resistor resistance accuracy, voltage reading accuracy, and DAQ resolution</p>
+                        </li>
+                        <li><h5>Voltage-Based (0-5V, 0-10V, etc.)</h5>
+                            <p> These signals are very simple and intuitive to set up, and they have a low lagtime due to the simple internal circuitry.  Though, they can be more susceptible to EMI and signal degradation from
+                                long cable runs - particularly the 0-5V signals.  It's important that the DAQ and the power supply for these sensors share a common ground,
+                                otherwise the signal will not work.
+                            </p>
+                            </li>
+                        <li><h5>Thermocouples, RTDs, and Thermistors</h5>
+                            <p>Thermocouples are ubiquitous, and are available for a wide variety of temperature ranges and accuracy needs. They are really nice tools because of the various form factors they come in - including
+                                bare leads going down to 40AWG and thinner, NPT pipe probe, and thin tube. They are simple to use with handheld readers, but they can make DAQ integration challenging, because they require a cold-junction compensation signal and their signal needs to be amplified significantly
+                                compared to a thermocouple output voltage table.  They tend to not be very precise, +/- 1°C is standard, and if a setup uses a second thermocouple as a cold-junction compensation this uncertainty increases even more.
+                                <br>
+                                They are very susceptible to EMI, and they can not be spliced easily because of the need to maintain the same material along the entire length of the wire runs.
+                            </p>
+                            <br>
+                            <p>
+                                I haven't worked with RTDs yet, but my understanding is that they are more accurate than thermocouples for temperatures under 600°C, at the cost of being more bulky and requiring more
+                                involved equipment setup to be able to read the signal.
+                            </p>
+                            <br>
+                            <p>
+                                Thermistors are much more accurate than thermocouples and RTDs, often to +/-1°C, but come in more bulky form factors and are more difficult to read without purchasing specialty readers or
+                                writing code to compare the signal to a thermistor output table.
+                            </p>
+                        </li>
+                        
+                    </ul>
+                </li>
                 <li><h4>Temperature Measurement</h4>
                 <ul class="bullet">
 
@@ -307,11 +342,24 @@
                                 8 turn-to-close needle valve would make for a poor emergency shutoff valve.
                             </p>
                             </li>
-                            <li><h5>Solenoid and Check Valves</h5>
+                            <li><h5>Solenoid Valves</h5>
+                                <p>When choosing a solenoid valve, some factors to take note of are flow directionality, Normally-Open or Normally-Closed Operation, minimum effective flow rate,
+                                    and electrical  signal requirements.  Some solenoids will only act as a check valve, allowing flow to proceed almost unrestricted in the opposite direction whether or
+                                    not they are closed. Many of these valves rely on the momentum of the flow to help actuate the valve, and if the flow rate is not high enough, the valve will not be able to actuate
+                                    and shut off the flow.</p>
+                                    <br>
+                                    <p>
+                                        Additionally, it's tempting to choose a Normally-Open or Normally-Closed valve solely based on desired fluid behavior, but there are caveats to be aware of. For example, it would be natural to choose a Normally-Closed
+                                        valve so that the valve will remain on 24/7 while it is powered, but would shut off if the setup loses power.  Some solenoids are not designed to receive power continuously, and can get very hot or even overheat if left too long. This is
+                                        because the magnetic coil behaves as an electrical short when it's not actively actuating the valve.
+                                    </p>
+                            </li>
+                            
+                            <li><h5>Check Valves</h5>
+                            <p>I haven't worked with check valves yet, but factors to keep in mind when selecting them include Cv, pipe diameter, minimum flow rate to actuate the valve, and in high-performance applications the time it takes for them to actuate.</p>
                             </li>
                         </ul>
 
-                <li><h4>Sealing and Leak Detection</h4></li>
             </ol>
         </section>
 
